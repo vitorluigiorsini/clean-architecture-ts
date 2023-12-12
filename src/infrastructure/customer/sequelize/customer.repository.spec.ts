@@ -37,10 +37,10 @@ describe('Customer repository test', () => {
       name: customer.name,
       active: customer.isActive(),
       rewardPoints: customer.rewardPoints,
-      street: address._street,
-      number: address._number,
-      zipcode: address._zip,
-      city: address._city
+      street: address.street,
+      number: address.number,
+      zipcode: address.zip,
+      city: address.city
     })
   })
 
@@ -60,10 +60,10 @@ describe('Customer repository test', () => {
       name: customer.name,
       active: customer.isActive(),
       rewardPoints: customer.rewardPoints,
-      street: address._street,
-      number: address._number,
-      zipcode: address._zip,
-      city: address._city
+      street: address.street,
+      number: address.number,
+      zipcode: address.zip,
+      city: address.city
     })
   })
 
