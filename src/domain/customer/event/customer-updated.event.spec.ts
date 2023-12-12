@@ -22,7 +22,7 @@ describe('Customer events tests', () => {
     const customerCreatedEvent = new CustomerUpdatedEvent({
       id: customer.id,
       name: customer.name,
-      address: customer.Address
+      address: customer.address
     })
 
     eventDispatcher.notify(customerCreatedEvent)
