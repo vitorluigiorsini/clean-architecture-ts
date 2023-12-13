@@ -1,4 +1,4 @@
-export interface InputFindAllCustomerDto {}
+export interface InputListCustomerDto {}
 
 type Customer = {
   id: string
@@ -11,6 +11,6 @@ type Customer = {
   }
 }
 
-export interface OutputFindAllCustomerDto {
+export interface OutputListCustomerDto {
   customers: Customer[]
 }

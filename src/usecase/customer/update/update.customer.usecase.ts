@@ -19,14 +19,16 @@ export default class UpdateCustomerUseCase {
 
     await this.customerRepository.update(customer)
 
+    const customerUpdated = await this.customerRepository.find(customer.id)
+
     return {
-      id: customer.id,
-      name: customer.name,
+      id: customerUpdated.id,
+      name: customerUpdated.name,
       address: {
-        street: customer.address.street,
-        number: customer.address.number,
-        zip: customer.address.zip,
-        city: customer.address.city
+        street: customerUpdated.address.street,
+        number: customerUpdated.address.number,
+        zip: customerUpdated.address.zip,
+        city: customerUpdated.address.city
       }
     }
   }

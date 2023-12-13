@@ -1,6 +1,6 @@
 import CustomerFactory from '../../../domain/customer/factory/customer.factory'
 import Address from '../../../domain/customer/value-object/address'
-import FindAllCustomerUseCase from './findAll.customer.usecase'
+import ListCustomerUseCase from './list.customer.usecase'
 
 const customer1 = CustomerFactory.createWithAddress(
   'John',
@@ -20,12 +20,12 @@ const MockRepository = () => {
   }
 }
 
-describe('Unit test customer find all use case', () => {
-  it('should find all customers', async () => {
+describe('Unit test customer list use case', () => {
+  it('should list customers', async () => {
     const customerRepository = MockRepository()
-    const customerFindAllUseCase = new FindAllCustomerUseCase(customerRepository)
+    const usecase = new ListCustomerUseCase(customerRepository)
 
-    const output = await customerFindAllUseCase.execute({})
+    const output = await usecase.execute({})
 
     expect(output.customers).toBeDefined()
     expect(output.customers.length).toEqual(2)

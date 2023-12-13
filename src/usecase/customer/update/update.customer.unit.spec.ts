@@ -30,9 +30,9 @@ const MockRepository = () => {
 describe('Unit test customer update use case', () => {
   it('should update a customer', async () => {
     const customerRepository = MockRepository()
-    const customerUpdateUseCase = new UpdateCustomerUseCase(customerRepository)
+    const usecase = new UpdateCustomerUseCase(customerRepository)
 
-    const output = await customerUpdateUseCase.execute(input)
+    const output = await usecase.execute(input)
 
     expect(output).toEqual(input)
   })
