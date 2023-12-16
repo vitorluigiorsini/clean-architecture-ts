@@ -26,6 +26,7 @@ describe('Test create product use case', () => {
     const usecase = new CreateProductUseCase(productRepository)
 
     const input = {
+      type: 'a',
       name: 'Product',
       price: 100
     }
